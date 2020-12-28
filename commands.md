@@ -5,13 +5,10 @@
 | ----------- | ------------------------------ |
 | (Argument)  | Argument is not required.      |
 
-## Configuration
-| Commands     | Arguments | Description                        |
-| ------------ | --------- | ---------------------------------- |
-| configure    |           | Configure a guild to use this bot. |
-| setadminrole | Role      | Set the bot admin role.            |
-| setprefix    | Text      | Set the bot prefix.                |
-| setstaffrole | Role      | Set the bot staff role.            |
+## Util
+| Commands | Arguments | Description        |
+| -------- | --------- | ------------------ |
+| ping     |           | Respond with pong. |
 
 ## Utility
 | Commands | Arguments | Description          |

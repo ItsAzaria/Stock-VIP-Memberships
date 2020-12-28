@@ -1,6 +1,5 @@
-group = "me.ddivad"
+group = "me.stockvip"
 version = Versions.BOT
-description = "discordKt starter template"
 
 plugins {
     kotlin("jvm") version "1.4.21"
@@ -23,10 +22,10 @@ tasks {
     }
 
     shadowJar {
-        archiveFileName.set("Starter.jar")
+        archiveFileName.set("Memberships.jar")
         manifest {
             attributes(
-                "Main-Class" to "me.ddivad.starter.MainKt"
+                "Main-Class" to "me.stockvip.memberships.MainKt"
             )
         }
     }
@@ -34,5 +33,5 @@ tasks {
 
 object Versions {
     const val BOT = "1.0.0"
-    const val DISCORDKT = "0.21.0"
+    const val DISCORDKT = "0.21.3"
 }
