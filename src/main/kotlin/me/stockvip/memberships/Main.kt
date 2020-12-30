@@ -23,16 +23,11 @@ suspend fun main(args: Array<String>) {
             allowMentionPrefix = false
             commandReaction = null
             theme = Color.MAGENTA
+            intents = Intents.all.values.toSet()
         }
 
         permissions {
             true
-        }
-
-        intents {
-            Intents.all.intents.forEach {
-                +it
-            }
         }
     }
 }
