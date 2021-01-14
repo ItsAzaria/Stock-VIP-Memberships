@@ -58,7 +58,7 @@ suspend fun evalLoop(api: Kord) {
         val message = api.defaultSupplier.getMessage(upgradeChannel!!.toSnowflake(), upgradeMessage!!.toSnowflake())
         message.addReaction(Emojis.whiteCheckMark.toReaction())
 
-        val reactors = message.getReactors(Emojis.whiteCheckMark.toReaction()).take(20).filterNot { it.isBot }.toList()
+        val reactors = message.getReactors(Emojis.whiteCheckMark.toReaction()).filterNot { it.isBot }.toList()
         val firstReactor = reactors.firstOrNull()
 
         if (firstReactor == null) {
