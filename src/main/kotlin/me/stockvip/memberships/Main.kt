@@ -67,7 +67,14 @@ suspend fun evalLoop(api: Kord) {
             return@launch
         }
 
-        val member = firstReactor.asMember(message.getGuild().id)
+        val member = firstReactor.asMemberOrNull(message.getGuild().id)
+
+        if (member == null) {
+            message.deleteReaction(firstReactor.id, Emojis.whiteCheckMark.toReaction())
+            delay(10000)
+            evalLoop(api)
+            return@launch
+        }
 
         sendDM(member)
         message.deleteReaction(member.id, Emojis.whiteCheckMark.toReaction())
