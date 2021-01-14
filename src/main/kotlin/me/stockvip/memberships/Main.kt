@@ -72,7 +72,7 @@ suspend fun evalLoop(api: Kord) {
         sendDM(member)
         message.deleteReaction(member.id, Emojis.whiteCheckMark.toReaction())
 
-        delay(5000)
+        delay(10000)
         evalLoop(api)
     }
 }
