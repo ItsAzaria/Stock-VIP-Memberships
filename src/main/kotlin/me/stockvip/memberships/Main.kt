@@ -62,7 +62,7 @@ suspend fun evalLoop(api: Kord) {
         val firstReactor = reactors.firstOrNull()
 
         if (firstReactor == null) {
-            delay(5000)
+            delay(10000)
             evalLoop(api)
             return@launch
         }
