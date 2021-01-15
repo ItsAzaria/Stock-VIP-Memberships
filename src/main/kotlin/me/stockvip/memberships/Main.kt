@@ -62,7 +62,7 @@ suspend fun evalLoop(api: Kord) {
         val firstReactor = reactors.firstOrNull()
 
         if (firstReactor == null) {
-            delay(10000)
+            delay(30000)
             evalLoop(api)
             return@launch
         }
@@ -71,7 +71,7 @@ suspend fun evalLoop(api: Kord) {
 
         if (member == null) {
             message.deleteReaction(firstReactor.id, Emojis.whiteCheckMark.toReaction())
-            delay(10000)
+            delay(30000)
             evalLoop(api)
             return@launch
         }
@@ -79,7 +79,7 @@ suspend fun evalLoop(api: Kord) {
         sendDM(member)
         message.deleteReaction(member.id, Emojis.whiteCheckMark.toReaction())
 
-        delay(10000)
+        delay(30000)
         evalLoop(api)
     }
 }
